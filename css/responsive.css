@@ -1,0 +1,244 @@
+
+
+
+@media screen and (min-width:768px) {
+  header span {
+    height: 2.08vw;
+  }
+  
+  #g-nav li a {
+    font-size: 22px;
+    margin-top: 53px;
+  }
+
+  .menu-logo {
+    width: 20vw;
+    margin-bottom: 1.73vw;
+  }
+
+  .sns-icon {
+    font-size: 1.73vw;
+  }
+
+  .nav-bottom {
+    position: absolute;
+    top: 50%;
+    left: 40%;
+  }
+
+
+  
+  
+  
+  .main-title-con {
+    width: 36vw;
+    margin: 0 auto;
+  }
+
+
+  #menu > div:nth-child(3) {
+    flex-direction: row-reverse;
+  }
+
+
+  .ChouetteEtoile-img {
+    width: 55vw;
+  }
+
+  .ÉternelMyrtille-img  {
+    width: 41vw;
+    margin-right: 8.3vw;
+  }
+
+  .Charme-img {
+    width: 47vw;
+  }
+
+
+  .section {
+    margin-top: 20vw;
+  }
+
+  .section-title {
+    font-size: 1.73vw;
+    margin-bottom: 6.25vw;
+  }
+
+  .cake-name {
+    font-size: 2.4vw;
+  }
+
+  .section-text p {
+    font-size: 1vw;
+  }
+
+  .detale-btn {
+    font-size: 1.38vw;
+    padding: 1.38vw 0;
+  }
+
+  
+  
+  
+  .section-container {
+    display: flex;
+    
+  }
+
+  .section-container:not(:last-child) {
+    margin-bottom: 17vw;
+  }
+
+  .section-text {
+    width: 26vw;
+  }
+
+  #menu
+   > div:nth-child(2) > .section-text {
+    margin: 21vw 0 0 3vw;
+
+  }
+
+  #menu
+  > div:nth-child(2n+1) > .section-text {
+    margin: 14.8vw 9vw 0 0;
+  }
+
+  
+  #menu
+  > div:nth-of-type(3) > .section-text {
+    margin: 9.3vw 0 0 7.8vw;
+  }
+
+
+  .news-container > p {
+    font-size: 1.38vw;
+  }
+
+
+  .news-text-container {
+    display: flex;
+    font-size: 1.38vw;
+    line-height: 1.38vw;
+    margin: 5vw 0;
+  }
+
+  
+  .news-text-container:nth-of-type(1) {
+    margin-top: 5vw;
+    margin-bottom: 3.8vw;
+  }
+
+  
+  .news-text-container:nth-of-type(2) {
+    margin-top: 3.8vw;
+    margin-bottom: 5vw;
+  }
+
+  .news-text-container > div {
+    margin-right: 5.4vw;
+  }
+
+  .date {
+    margin-right: 3vw;
+    font-size: 1.38vw;
+    line-height: 1.38vw;
+  }
+
+  .news-ja {
+    font-size: 1vw;
+    line-height: 1.38vw;
+    width: 3.8vw;
+    padding: 0;
+    padding-left: 0.8vw;
+  }
+
+  .picture-slider img {
+    width: 20vw;
+  }
+
+
+  .shop-map-container iframe{
+    width: 42vw;
+    height: 41vw;
+    margin-left: 4.9vw;
+    position: relative;
+    z-index: 100;
+    transform: rotate(0);
+  }
+
+  .shop-map {
+    display: flex;
+  }
+
+  .shop-text {
+    margin-left: 7.7vw;
+    margin-top: 4.8vw;
+  }
+
+  .shop-img {
+    text-align: right;
+  }
+
+  .shop-img img {
+    width: 37.4vw;
+    margin-right: 7.6vw;
+  }
+
+  .shop-span {
+    position: absolute;
+    top: 35%;
+    height: 41vw;
+    z-index: 0;
+  }
+
+  .shop-address {
+    font-size: 2vw;
+    margin-bottom: 1.6vw;
+  }
+
+  .shop-text > div p {
+    font-size: 1vw;
+  }
+
+
+  .footer-container {
+    margin-bottom: 100px;
+  }
+
+  .footer-container svg {
+    width: 24vw;
+    margin-top: 3.54vw;
+  }
+
+  .footer-menu {
+    width: 30vw;
+    margin: 4.1vw auto 2.08vw;
+    font-size: 1.38vw;
+  }
+
+  .footer-sns-icon {
+    width: 20vw;
+  }
+
+  .footer-sns-icon i {
+    font-size: 1.38vw;
+  }
+
+  .footer-rights {
+    font-size: 0.83vw;
+    margin-top: 2.84vw;
+  }
+
+}
+
+
+
+@media screen and (min-width:1440px) {
+  #g-nav li a {
+    font-size: 1.38vw;
+    margin-top: 3.68vw;
+  }
+
+  
+}

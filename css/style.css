@@ -1,0 +1,836 @@
+/**loading screen--------------------------------------------**/
+#splash {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+  background-color: white;
+  text-align: center;
+  color: #FF9AB9;
+}
+
+#splash_logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#splash_logo img {
+  width: 260px;
+}
+
+.fadeUp {
+  animation-name: fadeUpAnime;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+@keyframes fadeUpAnime {
+  form {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/**-------------------------------------------------------------**/
+
+
+
+
+
+
+
+
+/*nav----------------------------------*/
+#g-nav {
+  position: fixed;
+  z-index: 99;
+  top: 0;
+  left: -120%;
+  width: 80%;
+  height: 80vh;
+  background: #FF9AB9;
+  transition: all 0.6s;
+}
+
+#g-nav.panelactive {
+  left: 0;
+}
+
+#g-nav ul {
+  position: absolute;
+  z-index: 999;
+  top: 10%;
+  left: 15%;
+}
+
+#g-nav li {
+  
+}
+
+#g-nav li a {
+  color: white;
+  margin-top: 53px;
+  display: block;
+  letter-spacing: 0.1em;
+  font-size: 22px;
+  font-weight: lighter;
+}
+
+.nav-bottom {
+  position: absolute;
+  z-index: 999;
+  top: 80%;
+  left: 15%;
+}
+
+.nav-bottom > div {
+  display: flex;
+  justify-content: space-between;
+  width: 45%;
+}
+
+.sns-icon {
+  font-size: 25px;
+  color: white;
+}
+
+.menu-logo {
+  margin-bottom: 25px;
+  display: block;
+  width: 60%;
+}
+
+.menu-logo {
+  fill: white;
+}
+
+/*----------------------------------------*/
+
+
+
+
+
+
+
+
+
+
+
+
+/*nav cursor---------------------------------*/
+#g-nav li {
+  
+}
+
+#g-nav-list li a {
+  position: relative;
+  display: inline-block;
+}
+
+#g-nav-list li a:hover {
+  
+}
+
+#g-nav-list li a:after {
+  content: "";
+  position: absolute;
+  /*線の位置*/
+  bottom: 0;
+  left: 7%;
+
+  /*線の形状*/
+  width: 80%;
+  height: 1px;
+  background-color: white;
+
+  /*アニメーションの指定*/
+  transition: all .3s;
+  transform: scale(0, 1);
+  transform-origin: center top;
+}
+
+#g-nav-list li a:hover::after {
+  transform: scale(1, 1);
+}
+/*↑nav cursor---------------------------------*/
+
+
+
+
+
+
+
+
+
+
+
+/*openbtn------------------------------------*/
+.openbtn {
+  position: fixed;
+  z-index: 999;
+  top: 10px;
+  left: 10px;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+}
+
+.openbtn span {
+  display: inline-block;
+  transition: all .4s;
+  position: absolute;
+  left: 14px;
+  height: 2px;
+  border-radius: 2px;
+  background: rgb(34, 34, 34);
+  width: 100%;
+}
+
+.openbtn span:nth-of-type(1) {
+  top: 13px;
+}
+
+.openbtn span:nth-of-type(2) {
+  top: 23px;
+}
+
+.openbtn span:nth-of-type(3) {
+  top: 33px;
+  width: 60%;
+}
+
+/*activeクラスが付与されると線が回転して×になる*/
+.openbtn.active span:nth-of-type(1) {
+  top: 18px;
+  left: 18px;
+  transform: translateY(6px)rotate(-45deg);
+  width: 100%;
+}
+
+.openbtn.active span:nth-of-type(2) {
+  opacity: 0;
+}
+
+.openbtn.active span:nth-of-type(3) {
+  top: 30px;
+  left: 18px;
+  transform: translateY(-6px)rotate(45deg);
+  width: 100%;
+}
+
+
+/*↑openbtn---------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*slider--------------------------*/
+
+.slider {
+  position: relative;
+  z-index: 1;/*←h1の値より小さくする*/
+  
+}
+
+.slider-item01 {
+  
+}
+
+.slider-item {
+  width: 100%;
+  height: 100vh;
+  background-repeat: no-repeat;/*背景画像をリピートしない*/
+  background-position: center;/*背景画像を中央寄せ*/
+  background-size: cover;
+}
+
+
+/*やじるしの設定*/
+
+/*戻る、次への位置*/
+.slick-prev,
+.slick-next {
+  position: absolute;
+  z-index: 3;
+  top: 42%;
+  cursor: pointer;
+  outline: none;/*クリックしたら出てくる枠線を消す*/
+  border-right: 2px solid #ccc;/*矢印の色*/
+  border-top: 2px solid #ccc;
+  height: 25px;
+  width: 25px;
+}
+
+.slick-prev {/*戻るの位置と形*/
+  left: 2.5%;
+  transform: rotate(-135deg);
+}
+
+.slick-next {/*次への位置と形*/
+  right: 2.5%;
+  transform: rotate(45deg);
+}
+
+
+
+/*ドットナビゲーションの設定*/
+.slick-dots {
+  position: relative;
+  z-index: 3;
+  text-align: center;
+  margin: -50px 0 0 0 ;
+}
+
+.slick-dots li {
+  display: inline-block;
+  margin: 0 5px;
+}
+
+.slick-dots button {
+  color: transparent;
+  outline: none;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #333;
+}
+
+.slick-dots .slick-active button {
+  background: #333;
+}
+
+/*↑slider--------------------------*/
+
+
+
+
+
+
+
+
+
+
+
+
+body {
+  font-family: 'Yu Gothic', 'Hiragino Sans', sans-serif;
+}
+
+h1 {
+  position: absolute;
+  top: -9999px;
+  left: -9999px;
+}
+
+
+
+
+
+
+.main-title-con {
+  margin: 0 auto;
+  width: 41vw;
+}
+
+.header-main-title {
+  padding: 20px 0;
+}
+
+header span {
+  display: block;
+  width: 100%;
+  height: 30px;
+  background-color: #FF9AB9;
+}
+
+
+
+.index-btn-wrapper {
+  display: flex;
+  justify-content: space-between;
+  font-size: 60px;
+  color: #CECECE;
+}
+
+.prev-btn:after {
+  content: "";
+  clear: both;
+  display: block;
+}
+
+.change-btn {
+  
+}
+
+.prev-btn {
+  display: none;
+}
+
+.slide {
+  display: none;
+}
+
+.active {
+  display: block;
+}
+
+.slide-img {
+  width: 100%;
+}
+
+.section {
+  margin-top: 100px;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 23px;
+  letter-spacing: 0.1em;
+  font-weight: lighter;
+  margin-bottom: 90px;
+}
+
+.section-container {
+  margin-bottom: 178px;
+}
+
+.section-container img {
+  z-index: 4;
+}
+
+.section-text {
+  margin: 25px 28px;
+  font-weight: lighter;
+}
+
+.cake-name {
+  font-size: 35px;
+  margin-bottom: 25px;
+}
+
+.section-text p {
+  font-size: 15px;
+}
+
+.section-text p:nth-of-type(2) {
+  margin-top: 18px;
+  margin-bottom: 42px;
+}
+
+
+/*detale-btn*/
+.detale-btn {
+  text-align: center;
+  font-size: 20px;
+  padding: 10px 100px;
+  font-weight: bolder;
+  cursor: pointer;
+  color: #B39AFF;
+  display: block;
+  position: relative;
+  border: 1px solid #B39AFF;
+  text-decoration: none;
+  outline: none;
+  transition: all 0.3s ease-in-out;
+}
+
+.detale-btn:hover {
+  background-color: #B39AFF;
+  color: white;
+  border-color: transparent;
+}
+
+.detale-btn::after,
+.detale-btn::before {
+  content: "";
+  position: absolute;
+  border: solid #B39AFF;
+  width: 10px;
+  height: 10px;
+
+  transition: all 0.3s;
+}
+
+.detale-btn::before {
+  top: -6px;
+  left: -6px;
+  border-width: 1px 0 0 1px;
+}
+
+.detale-btn::after {
+  bottom: -6px;
+  right: -6px;
+  border-width: 0 1px 1px 0;
+}
+
+.detale-btn:hover::before,
+.detale-btn:hover::after {
+  width:calc(100% + 11px);
+	height:calc(100% + 11px);
+	border-color: #B39AFF;
+}
+/*------------------*/
+
+
+
+
+
+/*ÉternelMyrtille-btn*/
+.ÉternelMyrtille-btn {
+  color: #FF9AF1;
+  border: 1px solid #FF9AF1;
+}
+
+.ÉternelMyrtille-btn:hover {
+  background-color: #FF9AF1;
+}
+
+.ÉternelMyrtille-btn::after,
+.ÉternelMyrtille-btn::before {
+  border: solid #FF9AF1;
+}
+
+.ÉternelMyrtille-btn::before {
+  top: -6px;
+  left: -6px;
+  border-width: 1px 0 0 1px;
+}
+
+.ÉternelMyrtille-btn::after {
+  bottom: -6px;
+  right: -6px;
+  border-width: 0 1px 1px 0;
+}
+
+.ÉternelMyrtille-btn:hover::before,
+.ÉternelMyrtille-btn:hover::after {
+	border-color: #FF9AF1;
+}
+/*------------------*/
+
+
+
+
+/*Charme-btn*/
+.Charme-btn {
+  color: #FF9A9F;
+  border: 1px solid #FF9A9F;
+}
+
+.Charme-btn:hover {
+  background-color: #FF9A9F;
+}
+
+.Charme-btn::after,
+.Charme-btn::before {
+  border: solid #FF9A9F;
+}
+
+.Charme-btn::before {
+  top: -6px;
+  left: -6px;
+  border-width: 1px 0 0 1px;
+}
+
+.Charme-btn::after {
+  bottom: -6px;
+  right: -6px;
+  border-width: 0 1px 1px 0;
+}
+
+.Charme-btn:hover::before,
+.Charme-btn:hover::after {
+	border-color: #FF9A9F;
+}
+
+/*------------------*/
+
+.ÉternelMyrtille-img-con {
+  text-align: right;
+}
+
+.ChouetteEtoile-img {
+  width: 73vw;
+}
+
+.ÉternelMyrtille-img {
+  width: 65.6vw;
+}
+
+.Charme-img {
+  width: 81.6vw;
+}
+
+.news {
+  margin-bottom: 113px;
+}
+
+
+.news-container {
+  width: 82%;
+  margin: 0 auto;
+}
+
+.news-text-container > div {
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.news-text-container {
+  margin: 20px 0;
+}
+
+.date {
+  margin-right: 13px;
+  font-size: 10px;
+  line-height: 10px;
+
+}
+
+.news-ja {
+  font-size: 2px;
+  background-color:#FF9A9F;
+  color: white;
+  line-height: 10px;
+  padding: 2px 10px;
+}
+
+.nwes-text {
+  font-size: 15px;
+}
+
+.news-container > p {
+  margin: 20px 0 ;
+}
+
+
+
+
+.picture-slider {
+  width: 100%;
+  height: auto;
+}
+
+.picture-slider .slick-slide {
+  margin: 0 2.6vw;
+}
+
+.picture-slider img {
+  width: 187.5px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.shop {
+  margin-bottom: 258px;
+  position: relative;
+}
+
+
+.shop-map-container {
+  text-align: center;
+}
+
+.shop-map-container iframe {
+  width: 300px;
+  height: 240px;
+  position: relative;
+  z-index: 3;
+}
+
+
+.shop-text {
+  margin-top: 38px;
+  margin-left: 35px;
+}
+
+.shop-address {
+  font-size: 25px;
+  font-weight: lighter;
+  margin-bottom: 16px;
+}
+
+.shop-text > div p {
+  font-size: 10px;
+}
+
+.shop-text > div p:not(:last-child) {
+  margin-bottom: 13px;
+}
+
+.shop-img {
+  text-align: center;
+  margin-top: 40px;
+  position: relative;
+}
+
+.shop-img img {
+  width: 80vw;
+  z-index: 2;
+  transform: rotate(0);
+}
+
+.shop-span {
+  width: 100%;
+  height: 219px;
+  position: absolute;
+  top: 85%;
+  left: 0;
+  z-index: 0;
+  background-color: #FF9AB9;
+}
+
+.footer-container {
+  margin: 10px 50px;
+  text-align: center;
+}
+
+.footer-container svg {
+  width: 52vw;
+  margin-top: 10px;
+}
+
+.footer-menu {
+  display: flex;
+  justify-content: space-between;
+  margin: 35px auto 40px;
+}
+
+.footer-sns-icon {
+  display: flex;
+  justify-content: space-around;
+  margin: 0 auto;
+}
+
+.footer-sns-icon li {
+  font-size: 25px;
+  color: black;
+}
+
+.footer-rights {
+  margin-top: 41px;
+  text-align: center;
+  font-size: 12px;
+}
+
+
+/*footer anime---------------------------------*/
+.footer-menu li a {
+  position: relative;
+}
+
+.footer-menu li.current a,
+.footer-menu li a:hover {
+  color: #FF9AB9;
+  transition: all .3s;
+}
+
+.footer-menu li a:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 10%;
+
+  width: 80%;
+  height: 1px;
+  background-color: #FF9AB9;
+
+  transition: all .3s;
+  transform: scale(0, 1);
+  transform-origin: center top;
+}
+
+.footer-menu li.current a:after,
+.footer-menu li a:hover:after {
+  transform: scale(1, 1);
+}
+
+
+
+/*fadeAnime-----------------------------------*/
+.fadeInUpTrigger {
+  opacity: 0;
+}
+
+.fadeUp {
+  animation-name: fadeUpAnime;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+@keyframes fadeUpAnime {
+  from {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/*---------------------------------------------*/
+
+
+
+
+
+/*blurAnime-----------------------------------*/
+.blur {
+  animation-name: blurAnime;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes blurAnime {
+  form {
+    filter: blur(10px);
+    transform: scale(1.02);
+    opacity: 0;
+  }
+
+  to {
+    filter: blur(0);
+    transform: calc(1);
+    opacity: 1;
+  }
+}
+
+.blurTrigger {
+  opacity: 0;
+}
+
+/*---------------------------------------------*/
